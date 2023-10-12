@@ -5,9 +5,106 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: black;
+}
 
+img{
+    max-width: 100%;
+}
+
+:root {
+    --zoom-black: black;
+    --zoom-dark: #222222;
+    --zoom-rpimary: #4a4a4a;
+    --zoom-danger: red;
+    --zoom-white: white;
+}
+
+/*#region Debug*/
+.debug .wrapper{
+    background-color: red;
+}
+
+.debug .wrapper{
+    height: 100vh;
+}
+
+.debug .partecipant{
+    aspect-ratio: 1 / 1;
+    background-color: gray;
+}
+/*#endregion Debug*/
+
+.wrapper{
+    height: 100vh;
+    overflow: hidden; /*prevede che si rompa il layout*/
+}
+
+.top{
+    height: calc(100% - 80px);
+}
+
+.toolbar {
+    height: 80px;
+    background-color: #222;
+}
+
+.partecipants{
+    padding: 2rem 0;
+    overflow-y: auto;
+    height: calc(100% - 40px);
+}
+
+.partecipants .partecipant{
+    width: calc((100% / 7) -0.5rem) ;
+
+}
+
+.partecipants .container{
+    gap: 0.5rem;
+}
+
+
+.top_toolbar {
+    padding: 0.5rem;
+    text-align: end;
+}
 
 /* #region utility*/
+.container{
+    max-width: 1152;
+    margin: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: black;
+    color: var(--zoom-white);
+}
+
+.justify_content_center{
+    justify-content: center;
+}
+
+.text_end{
+    text-align: end;
+}
+
 /*Utility*/
 
 /* #endregion utility*/
@@ -21,5 +118,22 @@
 /* #endregion main*/
 
 /* #region footer*/
+footer.toolbar{
+    color: var(--zoom-white);
+    display: flex;
+    align-items: center;
+}
+
+footer.toolbar > .left
+footer.toolbar > .right{
+    flex-grow: 1;
+    padding: 0.25rem;
+}
+
+footer.toolbar > .center{
+    flex-grow: 2;
+    padding: 0.25rem;
+}
+
 
 /* #endregion footer*/
