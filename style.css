@@ -30,50 +30,15 @@ img{
     height: 100vh;
 }
 
-.debug .partecipant{
+.debug .participant{
     aspect-ratio: 1 / 1;
     background-color: gray;
 }
 /*#endregion Debug*/
 
-.wrapper{
-    height: 100vh;
-    overflow: hidden; /*prevede che si rompa il layout*/
-}
-
-.top{
-    height: calc(100% - 80px);
-}
-
-.toolbar {
-    height: 80px;
-    background-color: #222;
-}
-
-.partecipants{
-    padding: 2rem 0;
-    overflow-y: auto;
-    height: calc(100% - 40px);
-}
-
-.partecipants .partecipant{
-    width: calc((100% / 7) -0.5rem) ;
-
-}
-
-.partecipants .container{
-    gap: 0.5rem;
-}
-
-
-.top_toolbar {
-    padding: 0.5rem;
-    text-align: end;
-}
-
 /* #region utility*/
 .container{
-    max-width: 1152;
+    max-width: 1152px;
     margin: auto;
 }
 
@@ -87,13 +52,13 @@ img{
 
 .btn {
     background-color: transparent;
-    border: none;
     padding: 0.25rem;
     border-radius: 0.25rem;
+    border-style: none;
 }
 
 .btn-primary {
-    background-color: black;
+    background-color: var(--zoom-dark);
     color: var(--zoom-white);
 }
 
@@ -105,35 +70,69 @@ img{
     text-align: end;
 }
 
-/*Utility*/
-
 /* #endregion utility*/
 
-/* #region header*/
-
-/* #endregion header*/
-
 /* #region main*/
+.sfondo{
+    height: 100vh;
+    overflow: hidden; /*prevede che si rompa il layout*/
+}
+
+.m{
+    height: calc(100% - 70px);
+}
+
+.speacker {
+    padding: 0.5rem;
+    text-align: end;
+}
+
+.speacker i{
+    padding: 3px;
+    text-align: center;
+}
+
+.participants{
+    padding: 2rem 0;
+    overflow-y: auto;
+    height: calc(100% - 70px); 
+}
+
+.participants .part{
+    width: calc((100% / 7) - 0.5rem);
+}
+
+.participants .container{
+    gap: 0.5rem;
+}
 
 /* #endregion main*/
 
 /* #region footer*/
-footer.toolbar{
+.tools {
+    height: 70px;
+    background-color: #222;
+}
+
+footer.tools{
     color: var(--zoom-white);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-footer.toolbar > .left
-footer.toolbar > .right{
-    flex-grow: 1;
+footer.tools > .left
+footer.tools > .right{
+    /*flex-grow: 1;*/
     padding: 0.25rem;
 }
 
-footer.toolbar > .center{
-    flex-grow: 2;
+footer.tools > .center{
+    /*flex-grow: 2;*/
     padding: 0.25rem;
 }
 
 
 /* #endregion footer*/
+
+/*icon - micro*/
