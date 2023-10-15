@@ -7,6 +7,7 @@
 
 body{
     background-color: black;
+    font-family: arial;
 }
 
 img{
@@ -20,21 +21,6 @@ img{
     --zoom-danger: red;
     --zoom-white: white;
 }
-
-/*#region Debug*/
-.debug .wrapper{
-    background-color: red;
-}
-
-.debug .wrapper{
-    height: 100vh;
-}
-
-.debug .participant{
-    aspect-ratio: 1 / 1;
-    background-color: gray;
-}
-/*#endregion Debug*/
 
 /* #region utility*/
 .container{
@@ -60,14 +46,6 @@ img{
 .btn-primary {
     background-color: var(--zoom-dark);
     color: var(--zoom-white);
-}
-
-.justify_content_center{
-    justify-content: center;
-}
-
-.text_end{
-    text-align: end;
 }
 
 /* #endregion utility*/
@@ -100,12 +78,22 @@ img{
 
 .participants .part{
     width: calc((100% / 7) - 0.5rem);
+    position: relative;
 }
 
 .participants .container{
     gap: 0.5rem;
 }
 
+.name{
+    font-size: x-small;
+    background-color: rgba(45, 45, 45, 0.489);
+    position: absolute;
+    bottom: 3px;
+    left: 1px;
+    color: var(--zoom-white);
+    padding: 0.3rem;
+}
 /* #endregion main*/
 
 /* #region footer*/
@@ -119,20 +107,32 @@ footer.tools{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 }
 
-footer.tools > .left
-footer.tools > .right{
-    /*flex-grow: 1;*/
-    padding: 0.25rem;
+.icon> div{
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.5rem;
+    font-size: x-small;
 }
 
-footer.tools > .center{
-    /*flex-grow: 2;*/
-    padding: 0.25rem;
+.icon{
+    font-size:large;
 }
 
+.toggle, .btn_f{
+    align-items: center;
+    font-size: x-small;
+}
 
+.right{
+    height: 100%;
+    background-color: var(--zoom-rpimary);
+    padding: 0 1rem;
+}
+
+.btn_f{
+    color: var(--zoom-danger); 
+}
 /* #endregion footer*/
-
-/*icon - micro*/
